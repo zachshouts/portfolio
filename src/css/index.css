@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+/* Absolute Positioned Styles */
+.left-50 {
+    left: 50%;
+}
+
+.right-50 {
+    right: 50%;
+}
+
+.top-50 {
+    top: 50%;
+}
+
+.-z-1 {
+    z-index: -1;
+}
+
+
+/* Custom Classes to Apply Multiple TW Utilities */
+.secondary-title {
+    @apply text-3xl font-bold;
+}
+
+.secondary-title::before {
+    content: "";
+    @apply block w-12 h-2 bg-theme rounded-full mb-1;
+}
+
+.section-paragraph {
+    @apply text-secondary my-6 w-full max-w-3xl;
+}
+
+.badge {
+    @apply px-4 py-2 text-sm rounded bg-badge;
+}
+
+[id] {
+    scroll-margin-top: 100px;
+}
+
+.left-percentage {
+    left: 5%;
+}
+
+.h-screen-partial {
+    height: 80vh;
+}
+
+/* Dot Nav Styles */
+.nav-dot {
+    transition: background 200ms, border-color 200ms;
+}
+
+.selected-circle {
+    @apply border-theme bg-theme;
+}
+
+.nav-dot:hover span {
+    opacity: 1;
+}
+
+
+/* Mobile Nav Menu Styles */
+.nav-list {
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+}
+
+.nav-item {
+    display: block;
+    margin: 1.5rem 0;
+}
+
+.nav-list.nav-open {
+    transform: translateX(0);
+}
