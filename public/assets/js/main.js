@@ -3,7 +3,20 @@ const navList = document.querySelector('.nav-list');
 
 // Applies The Class That Transforms The Mobile Menu
 const toggleNav = () => {
-    navList.classList.toggle('nav-open');
+
+    if (navList.classList.contains('nav-list-active')) {
+        navList.classList.toggle('nav-open');
+        setTimeout(() => {
+            navList.classList.toggle('nav-list-active');
+            navList.classList.toggle('nav-list-inactive');
+        }, 350);
+    } else if (navList.classList.contains('nav-list-inactive')) {
+        navList.classList.toggle('nav-list-inactive');
+        navList.classList.toggle('nav-list-active');
+        setTimeout(() => {
+            navList.classList.toggle('nav-open');
+        }, 350);
+    }
 };
 
 

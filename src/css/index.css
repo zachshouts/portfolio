@@ -79,6 +79,14 @@ html, body {
     margin: 1.5rem 0;
 }
 
+.nav-list-active {
+    display: block;
+}
+
+.nav-list-inactive {
+    display: none;
+}
+
 .nav-list.nav-open {
     transform: translateX(0);
 }
